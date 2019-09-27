@@ -10,6 +10,12 @@ const creditSchema = new mongoose.Schema({
         type: Number,
         min: 0,
         required: true
+    },
+    status: {
+        type: String,
+        required: false,
+        uppercase: true,
+        enum: ['RECEBIDO', 'PENDENTE', 'AGENDADO']
     }
   })
 
